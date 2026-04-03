@@ -14,7 +14,7 @@ export const translations = {
       },
       {
         title: "3. Earning Points",
-        content: "Points are the currency of survival in the world of epigames.<br/><ul><li><strong>The Baseline:</strong> You receive a guaranteed point reward every day just for participating.</li><li><strong>Social Bonuses:</strong> Choosing not to quarantine and stay active allows you to earn extra points for every unique, long-enough contact you make via Bluetooth.</li><li><strong>Limits:</strong> To keep it fair, there is a daily cap on scoring contacts. The app will notify you when you've hit your bonus limit for the day.</li></ul>"
+        content: "Points are the currency of survival in the world of epigames.<br/><ul><li><strong>The Baseline:</strong> You receive a guaranteed point reward every day just for participating.</li><li><strong>Social Bonuses:</strong> Choosing not to quarantine and stay active allows you to earn extra points for every unique, long-enough contact you make via Bluetooth.</li><li><strong>Illness:</strong> If your avatar gets sick, your point-earning ability drops significantly. If your avatar dies from the infection, you will lose all your accumulated points.</li></ul>"
       },
       {
         title: "4. Using Your Points",
@@ -41,7 +41,7 @@ es: {
       },
       {
         title: "3. Ganar Puntos",
-        content: "Los puntos son la moneda de supervivencia en el mundo de los epigames.<br/><ul><li><strong>La Base:</strong> Recibes una recompensa de puntos garantizada cada día solo por participar.</li><li><strong>Bonificaciones Sociales:</strong> Elegir no hacer cuarentena y mantenerte activo te permite ganar puntos extra por cada contacto único y lo suficientemente largo que hagas a través de Bluetooth.</li><li><strong>Límites:</strong> Para mantener la equidad, hay un límite diario de contactos que otorgan puntos. La aplicación te notificará cuando hayas alcanzado tu límite de bonificación del día.</li></ul>"
+        content: "Los puntos son la moneda de supervivencia en el mundo de los epigames.<br/><ul><li><strong>La Base:</strong> Recibes una recompensa de puntos garantizada cada día solo por participar.</li><li><strong>Bonificaciones Sociales:</strong> Elegir no hacer cuarentena y mantenerte activo te permite ganar puntos extra por cada contacto único y lo suficientemente largo que hagas a través de Bluetooth.</li><li><strong>Enfermedad:</strong> Si tu avatar se enferma, tu capacidad para ganar puntos disminuirá significativamente. Si tu avatar muere a causa de la infección, perderás todos los puntos acumulados.</li></ul>"
       },
       {
         title: "4. Uso de Tus Puntos",
@@ -68,7 +68,7 @@ es: {
       },
       {
         title: "٣. كسب النقاط",
-        content: "النقاط هي عملة البقاء والنجاح.<br/><ul><li><strong>الأساس:</strong> تتلقى مكافأة نقاط مضمونة كل يوم لمجرد المشاركة.</li><li><strong>المكافآت الاجتماعية:</strong> يتيح لك اختيار عدم الحجر الصحي والبقاء نشطًا كسب نقاط إضافية عن كل اتصال فريد وطويل بما يكفي تجريه عبر البلوتوث.</li><li><strong>الحدود:</strong> لضمان العدالة، هناك حد يومي أقصى للاتصالات التي تسجل نقاطًا. سيعلمك التطبيق عندما تصل إلى حد المكافأة الخاص بك لهذا اليوم.</li></ul>"
+        content: "النقاط هي عملة البقاء والنجاح.<br/><br/><ul><li><strong>الأساس:</strong> تتلقى مكافأة نقاط مضمونة كل يوم لمجرد المشاركة.</li><br/><li><strong>المكافآت الاجتماعية:</strong> يتيح لك اختيار عدم الحجر الصحي والبقاء نشطًا كسب نقاط إضافية عن كل اتصال فريد وطويل بما يكفي تجريه عبر البلوتوث.</li><br/><li><strong>تأثير المرض:</strong> إذا مرضت شخصيتك، ستقل قدرتك على كسب النقاط بشكل كبير. وإذا ماتت بسبب العدوى، فستفقد جميع نقاطك المتراكمة.</li></ul>"
       },
       {
         title: "٤. استخدام نقاطك",
@@ -95,7 +95,7 @@ es: {
       },
       {
         title: "3. Kiếm điểm",
-        content: "Điểm số là đơn vị tiền tệ của sự sinh tồn trong thế giới epigames.<br/><ul><li><strong>Điểm cơ bản:</strong> Bạn nhận được một phần thưởng điểm được đảm bảo mỗi ngày chỉ cần bạn tham gia.</li><li><strong>Phần thưởng xã hội:</strong> Chọn không cách ly và duy trì hoạt động cho phép bạn kiếm thêm điểm cho mỗi liên hệ duy nhất, đủ dài mà bạn thực hiện qua Bluetooth.</li><li><strong>Giới hạn:</strong> Để đảm bảo tính công bằng, có một giới hạn hàng ngày cho các liên hệ ghi điểm. Ứng dụng sẽ thông báo cho bạn khi bạn đã đạt đến giới hạn phần thưởng trong ngày.</li></ul>"
+        content: "Điểm số là đơn vị tiền tệ của sự sinh tồn trong thế giới epigames.<br/><ul><li><strong>Điểm cơ bản:</strong> Bạn nhận được một phần thưởng điểm được đảm bảo mỗi ngày chỉ cần bạn tham gia.</li><li><strong>Phần thưởng xã hội:</strong> Chọn không cách ly và duy trì hoạt động cho phép bạn kiếm thêm điểm cho mỗi liên hệ duy nhất, đủ dài mà bạn thực hiện qua Bluetooth.</li><li><strong>Tác động của Bệnh tật:</strong> Nếu nhân vật của bạn bị ốm, khả năng kiếm điểm của bạn sẽ giảm đi đáng kể. Nếu nhân vật của bạn chết vì nhiễm bệnh, bạn sẽ mất toàn bộ số điểm đã tích lũy.</li></ul>"
       },
       {
         title: "4. Sử dụng điểm của bạn",
