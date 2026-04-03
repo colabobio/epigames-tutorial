@@ -33,7 +33,10 @@ const App = () => {
 
       <main style={styles.main}>
         <div style={styles.card}>
-          <p style={styles.text}>{currentData.content}</p>
+          <div 
+            style={styles.text} 
+            dangerouslySetInnerHTML={{ __html: currentData.content }} 
+          />
         </div>
         
         <div style={styles.progressContainer}>
