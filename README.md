@@ -16,15 +16,28 @@ Compile the React code into standard, browser-ready HTML, CSS, and JavaScript:
 npm run build
 ```
 
-This will create a new folder called dist in the project directory. The contents of this dist folder are the final, deployable website.
+This will create a new folder called dist in the project directory. The contents of this dist folder are the final, deployable website. Make sure to set the path of the tutorial in the deployed site in the vite.config.js file:
 
-The tutorial can be tested locally by running:
+```
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  // This tells Vite exactly where the app will live on example.com
+  base: '/path/to/tutorial/', 
+})
+```
+
+In this example above, the deployed tutorial will be available at https://example.com/path/to/tutorial/
+
+The tutorial can be tested locally by running with vite:
 
 ```
 npm run dev
 ```
 
-To preview the static built version of the site off the dist folder, use the following:
+To preview the static built version of the site off the dist folder, as if were from the deployed site, use the following:
 
 ```
 npm run preview
