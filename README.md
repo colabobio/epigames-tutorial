@@ -24,6 +24,12 @@ The tutorial can be tested locally by running:
 npm run dev
 ```
 
+To preview the static built version of the site off the dist folder, use the following:
+
+```
+npm run preview
+```
+
 # Move the files to the Epidemica website repo
 
 Now, you need to transfer those built files into your existing epidemica-website repository.
