@@ -1,5 +1,13 @@
 # Epigames tutorial page
 
+## Setting up
+
+Install dependencies after cloning the repo:
+
+```
+npm install
+```
+
 ## Building
 
 Compile the React code into standard, browser-ready HTML, CSS, and JavaScript:
@@ -9,6 +17,12 @@ npm run build
 ```
 
 This will create a new folder called dist in the project directory. The contents of this dist folder are the final, deployable website.
+
+The tutorial can be tested locally by running:
+
+```
+npm run dev
+```
 
 # Move the files to the Epidemica website repo
 
