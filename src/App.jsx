@@ -94,7 +94,7 @@ const styles = {
     padding: '20px',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
   card: {
     backgroundColor: '#FFFFFF',
