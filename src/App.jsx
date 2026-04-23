@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { translations } from './translations';
 import page1 from './assets/page1.png';
 import page2 from './assets/page2.png';
@@ -31,6 +31,14 @@ const App = () => {
 
   const t = translations[lang];
   const currentData = t.steps[step];
+  const mainRef = useRef(null);
+  const extraRef = useRef(null);
+
+  const scrollToExtra = () => {
+    if (extraRef.current && mainRef.current) {
+      mainRef.current.scrollTo({ top: extraRef.current.offsetTop - 20, behavior: 'smooth' });
+    }
+  };
 
   const handleNext = () => {
     if (step < t.steps.length - 1) setStep(step + 1);
@@ -42,11 +50,12 @@ const App = () => {
 
   return (
     <div style={styles.container}>
+      <style>{`@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }`}</style>
       <header style={styles.header}>
         <h2 style={styles.title}>{currentData.title}</h2>
       </header>
 
-      <main style={styles.main}>
+      <main ref={mainRef} style={styles.main}>
         <div style={styles.card}>
           <p style={styles.lead}>{currentData.lead}</p>
           <img
@@ -57,7 +66,15 @@ const App = () => {
         </div>
 
         {step === t.steps.length - 1 && currentData.page6Steps && (
-          <div style={styles.extraContent}>
+          <button onClick={scrollToExtra} style={styles.scrollCue} aria-label="Scroll down">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" stroke="#007AFF" strokeWidth="2"/>
+              <polyline points="10,13 16,20 22,13" stroke="#007AFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+            </svg>
+          </button>
+        )}
+        {step === t.steps.length - 1 && currentData.page6Steps && (
+          <div ref={extraRef} style={styles.extraContent}>
             {currentData.page6Steps.map((item, i) =>
               item.sectionTitle ? (
                 <div key={i} style={styles.sectionCard}>
@@ -146,7 +163,16 @@ const styles = {
   },
   lead: { fontSize: '1.1rem', margin: '0 0 16px 0', lineHeight: '1.6' },
   pageImage: { width: '100%', borderRadius: '8px', display: 'block' },
-  extraContent: { display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' },
+  extraContent: { display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '4px' },
+  scrollCue: {
+    display: 'block',
+    margin: '12px auto 0',
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+    padding: '4px',
+    animation: 'bounce 1.4s infinite',
+  },
   stepCard: {
     backgroundColor: '#FFFFFF',
     padding: '16px',
