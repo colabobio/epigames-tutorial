@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { translations } from './translations';
+import page1 from './assets/page1.png';
+import page2 from './assets/page2.png';
+import page3 from './assets/page3.png';
+import page4 from './assets/page4.png';
+import page5 from './assets/page5.png';
+import page6 from './assets/page6.png';
+
+const pageImages = [page1, page2, page3, page4, page5, page6];
 
 const App = () => {
   const [step, setStep] = useState(0);
@@ -33,9 +41,11 @@ const App = () => {
 
       <main style={styles.main}>
         <div style={styles.card}>
-          <div 
-            style={styles.text} 
-            dangerouslySetInnerHTML={{ __html: currentData.content }} 
+          <p style={styles.lead}>{currentData.lead}</p>
+          <img
+            src={pageImages[step]}
+            alt={currentData.title}
+            style={styles.pageImage}
           />
         </div>
         
@@ -103,7 +113,8 @@ const styles = {
     boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
     lineHeight: '1.6',
   },
-  text: { fontSize: '1.1rem', margin: 0 },
+  lead: { fontSize: '1.1rem', margin: '0 0 16px 0', lineHeight: '1.6' },
+  pageImage: { width: '100%', borderRadius: '8px', display: 'block' },
   progressContainer: { display: 'flex', justifyContent: 'center', marginTop: '20px' },
   dot: { width: '8px', height: '8px', borderRadius: '50%', margin: '0 4px', transition: 'background-color 0.3s' },
   footer: {
