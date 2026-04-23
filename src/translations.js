@@ -14,7 +14,7 @@ export const translations = {
       },
       {
         title: "Social Contacts & Bonuses",
-        lead: "Each social contact (longer than 5 minutes) with other players in the epigame, will get you a random point bonus. However, you risk getting your avatar sick if you encounter infected players."
+        lead: "Each contact longer than 5 minutes with another player will get you a point bonus (and you need to keep Bluetooth on). However, you risk getting your avatar sick if you encounter infected players."
       },
       {
         title: "The Shop",
@@ -45,7 +45,7 @@ export const translations = {
       },
       {
         title: "Contactos Sociales y Bonificaciones",
-        lead: "Cada contacto social (de más de 5 minutos) con otros jugadores del epigame te otorgará una bonificación de puntos aleatoria. Sin embargo, arriesgas que tu avatar se enferme si encuentras jugadores infectados."
+        lead: "Cada contacto de más de 5 minutos con otro jugador te dará una bonificación de puntos (y necesitas mantener el Bluetooth activado). Sin embargo, arriesgas que tu avatar se enferme si encuentras jugadores infectados."
       },
       {
         title: "La Tienda",
@@ -76,7 +76,7 @@ export const translations = {
       },
       {
         title: "الاتصالات الاجتماعية والمكافآت",
-        lead: "كل اتصال اجتماعي (أطول من 5 دقائق) مع لاعبين آخرين في اللعبة سيمنحك مكافأة نقاط عشوائية. ومع ذلك، تخاطر بمرض شخصيتك إذا واجهت لاعبين مصابين."
+        lead: "كل اتصال أطول من 5 دقائق مع لاعب آخر سيمنحك مكافأة نقاط (ويجب أن تبقي البلوتوث مفعّلاً). ومع ذلك، تخاطر بمرض شخصيتك إذا واجهت لاعبين مصابين."
       },
       {
         title: "المتجر",
@@ -107,7 +107,7 @@ export const translations = {
       },
       {
         title: "Tiếp Xúc Xã Hội & Phần Thưởng",
-        lead: "Mỗi tiếp xúc xã hội (dài hơn 5 phút) với người chơi khác trong epigame sẽ mang lại cho bạn một phần thưởng điểm ngẫu nhiên. Tuy nhiên, bạn có nguy cơ làm nhân vật bị bệnh nếu gặp người chơi bị nhiễm."
+        lead: "Mỗi tiếp xúc dài hơn 5 phút với người chơi khác sẽ mang lại cho bạn một phần thưởng điểm (và bạn cần giữ Bluetooth bật). Tuy nhiên, bạn có nguy cơ làm nhân vật bị bệnh nếu gặp người chơi bị nhiễm."
       },
       {
         title: "Cửa Hàng",
