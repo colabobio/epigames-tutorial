@@ -56,54 +56,56 @@ const App = () => {
       </header>
 
       <main ref={mainRef} style={styles.main}>
-        <div style={styles.card}>
-          <p style={styles.lead}>{currentData.lead}</p>
-          <img
-            src={pageImages[step]}
-            alt={currentData.title}
-            style={styles.pageImage}
-          />
-        </div>
-
-        {step === t.steps.length - 1 && currentData.page6Steps && (
-          <button onClick={scrollToExtra} style={styles.scrollCue} aria-label="Scroll down">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="16" cy="16" r="15" stroke="#007AFF" strokeWidth="2"/>
-              <polyline points="10,13 16,20 22,13" stroke="#007AFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
-            </svg>
-          </button>
-        )}
-        {step === t.steps.length - 1 && currentData.page6Steps && (
-          <div ref={extraRef} style={styles.extraContent}>
-            {currentData.page6Steps.map((item, i) =>
-              item.sectionTitle ? (
-                <div key={i} style={styles.sectionCard}>
-                  <h3 style={styles.sectionTitle}>{item.sectionTitle}</h3>
-                  <p style={styles.sectionBody}>{item.sectionBody}</p>
-                </div>
-              ) : (
-                <div key={i} style={styles.stepCard}>
-                  {page6Images[i] && (
-                    <img
-                      src={page6Images[i]}
-                      alt={`Step ${i + 1}`}
-                      style={styles.pageImage}
-                    />
-                  )}
-                  <p style={styles.stepText}>{item.text}</p>
-                </div>
-              )
-            )}
+        <div style={styles.contentWrapper}>
+          <div style={styles.card}>
+            <p style={styles.lead}>{currentData.lead}</p>
+            <img
+              src={pageImages[step]}
+              alt={currentData.title}
+              style={styles.pageImage}
+            />
           </div>
-        )}
-        
-        <div style={styles.progressContainer}>
-          {t.steps.map((_, i) => (
-            <div key={i} style={{
-              ...styles.dot,
-              backgroundColor: i === step ? '#007AFF' : '#C7C7CC'
-            }} />
-          ))}
+
+          {step === t.steps.length - 1 && currentData.page6Steps && (
+            <button onClick={scrollToExtra} style={styles.scrollCue} aria-label="Scroll down">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="16" cy="16" r="15" stroke="#007AFF" strokeWidth="2"/>
+                <polyline points="10,13 16,20 22,13" stroke="#007AFF" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+              </svg>
+            </button>
+          )}
+          {step === t.steps.length - 1 && currentData.page6Steps && (
+            <div ref={extraRef} style={styles.extraContent}>
+              {currentData.page6Steps.map((item, i) =>
+                item.sectionTitle ? (
+                  <div key={i} style={styles.sectionCard}>
+                    <h3 style={styles.sectionTitle}>{item.sectionTitle}</h3>
+                    <p style={styles.sectionBody}>{item.sectionBody}</p>
+                  </div>
+                ) : (
+                  <div key={i} style={styles.stepCard}>
+                    {page6Images[i] && (
+                      <img
+                        src={page6Images[i]}
+                        alt={`Step ${i + 1}`}
+                        style={styles.pageImage}
+                      />
+                    )}
+                    <p style={styles.stepText}>{item.text}</p>
+                  </div>
+                )
+              )}
+            </div>
+          )}
+
+          <div style={styles.progressContainer}>
+            {t.steps.map((_, i) => (
+              <div key={i} style={{
+                ...styles.dot,
+                backgroundColor: i === step ? '#007AFF' : '#C7C7CC'
+              }} />
+            ))}
+          </div>
         </div>
       </main>
 
@@ -161,8 +163,15 @@ const styles = {
     boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
     lineHeight: '1.6',
   },
-  lead: { fontSize: '1.1rem', margin: '0 0 16px 0', lineHeight: '1.6' },
-  pageImage: { width: '100%', borderRadius: '8px', display: 'block' },
+  lead: { fontSize: '1.15rem', margin: '0 0 16px 0', lineHeight: '1.7' },
+  pageImage: { width: '100%', maxHeight: '50vh', objectFit: 'contain', borderRadius: '8px', display: 'block' },
+  contentWrapper: {
+    width: '100%',
+    maxWidth: '640px',
+    margin: '0 auto',
+    display: 'flex',
+    flexDirection: 'column',
+  },
   extraContent: { display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '4px' },
   scrollCue: {
     display: 'block',
