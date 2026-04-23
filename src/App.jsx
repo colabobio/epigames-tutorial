@@ -91,7 +91,7 @@ const App = () => {
                         style={styles.pageImage}
                       />
                     )}
-                    <p style={styles.stepText}>{item.text}</p>
+                    <p style={styles.stepText} dangerouslySetInnerHTML={{ __html: item.text }} />
                   </div>
                 )
               )}
