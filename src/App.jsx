@@ -6,8 +6,15 @@ import page3 from './assets/page3.png';
 import page4 from './assets/page4.png';
 import page5 from './assets/page5.png';
 import page6 from './assets/page6.png';
+import page6step1 from './assets/page6-step1.png';
+import page6step2 from './assets/page6-step2.png';
+import page6step3 from './assets/page6-step3.png';
+import page6step4 from './assets/page6-step4.png';
+import page6step5 from './assets/page6-step5.png';
+import page6step6 from './assets/page6-step6.png';
 
 const pageImages = [page1, page2, page3, page4, page5, page6];
+const page6Images = [page6step1, page6step2, page6step3, page6step4, null, page6step5, page6step6];
 
 const App = () => {
   const [step, setStep] = useState(0);
@@ -48,6 +55,30 @@ const App = () => {
             style={styles.pageImage}
           />
         </div>
+
+        {step === t.steps.length - 1 && currentData.page6Steps && (
+          <div style={styles.extraContent}>
+            {currentData.page6Steps.map((item, i) =>
+              item.sectionTitle ? (
+                <div key={i} style={styles.sectionCard}>
+                  <h3 style={styles.sectionTitle}>{item.sectionTitle}</h3>
+                  <p style={styles.sectionBody}>{item.sectionBody}</p>
+                </div>
+              ) : (
+                <div key={i} style={styles.stepCard}>
+                  {page6Images[i] && (
+                    <img
+                      src={page6Images[i]}
+                      alt={`Step ${i + 1}`}
+                      style={styles.pageImage}
+                    />
+                  )}
+                  <p style={styles.stepText}>{item.text}</p>
+                </div>
+              )
+            )}
+          </div>
+        )}
         
         <div style={styles.progressContainer}>
           {t.steps.map((_, i) => (
@@ -115,6 +146,22 @@ const styles = {
   },
   lead: { fontSize: '1.1rem', margin: '0 0 16px 0', lineHeight: '1.6' },
   pageImage: { width: '100%', borderRadius: '8px', display: 'block' },
+  extraContent: { display: 'flex', flexDirection: 'column', gap: '16px', marginTop: '16px' },
+  stepCard: {
+    backgroundColor: '#FFFFFF',
+    padding: '16px',
+    borderRadius: '12px',
+    boxShadow: '0 4px 6px rgba(0,0,0,0.05)',
+  },
+  stepText: { fontSize: '1rem', margin: '12px 0 0 0', lineHeight: '1.6', color: '#1C1C1E' },
+  sectionCard: {
+    backgroundColor: '#E8F0FE',
+    padding: '20px',
+    borderRadius: '12px',
+    borderLeft: '4px solid #007AFF',
+  },
+  sectionTitle: { margin: '0 0 8px 0', fontSize: '1.1rem', fontWeight: '700', color: '#007AFF' },
+  sectionBody: { margin: 0, fontSize: '1rem', fontStyle: 'italic', color: '#1C1C1E', lineHeight: '1.6' },
   progressContainer: { display: 'flex', justifyContent: 'center', marginTop: '20px' },
   dot: { width: '8px', height: '8px', borderRadius: '50%', margin: '0 4px', transition: 'background-color 0.3s' },
   footer: {
